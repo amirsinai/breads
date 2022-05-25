@@ -3,8 +3,16 @@ const breads = express.Router();
 const Bread = require("../models/bread.js");
 
 // INDEX
+// breads.get("/", (req, res) => {
+//   res.send(Bread);
+// });
+
+// INDEX
 breads.get("/", (req, res) => {
-  res.send(Bread);
+  res.render("Index", {
+    breads: Bread,
+  });
+  // res.send(Bread)
 });
 
 // SHOW
