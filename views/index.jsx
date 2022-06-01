@@ -8,6 +8,8 @@ function Index({ breads }) {
       {/* <p>I have {breads[0].name} bread! </p> */}
       <ul>
         {breads.map((bread, index) => {
+          // console.log(bread.name);
+          // console.log(index);
           return (
             <li key={index}>
               <a href={`/breads/${index}`}>{bread.name}</a>
@@ -15,6 +17,12 @@ function Index({ breads }) {
           );
         })}
       </ul>
+
+      <div className="newButton">
+        <a href="/breads/new">
+          <button>Add a new bread</button>
+        </a>
+      </div>
     </Default>
   );
 }
